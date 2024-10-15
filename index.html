@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Juniper Siivouspalvelut offers professional cleaning services in Rovaniemi for homes and businesses. Discover our eco-friendly solutions tailored to your needs.">
+    <title>Juniper Siivouspalvelut</title>
+    <link rel="icon" href="./oksat.ico" type="image/x-icon">
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;600&family=Lato:wght@400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+        /* General Body Styling with Earthy Color Palette and Subtle Texture */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0EDE5; /* Warm Beige */
+            color: #4B4B3E; /* Deep Olive Green */
+        }
+
+        /* Full-Width Section Styles with Color Blocks */
+        section {
+            padding: 6rem 7rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        section:nth-child(odd) {
+            background-color: #F9F5EC; /* Slightly different beige tone */
+        }
+
+        section#etusivu {
+            background-image: url('https://freenaturestock.com/wp-content/uploads/freenaturestock-2256-1024x683.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: #ffffff;
+        }
+
+        section#etusivu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(61, 78, 68, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        section#etusivu * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Styling for h1, h2, and h3 */
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3D3D29; /* Darker Olive Green */
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: #5A5A44; /* Warm Olive Green */
+        }
+
+        /* Icon Styling */
+        h2 i {
+            color: #C6A57B;
+            margin-right: 10px;
+        }
+
+        h3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.75rem;
+            color: #6C6C58; /* Soft Olive */
+        }
+
+        /* Body text and paragraph styling */
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo img {
+            width: 600px; /* Big logo */
+            height: auto;
+            transition: transform 0.9s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Flexbox for centered logo (submark) in the navigation bar */
+        nav {
+            display: flex;
+            justify-content: space-between; /* For even spacing between items */
+            align-items: center; /* Vertically align items in the center */
+            padding: 0.8rem;
+            background-color: #6C7753; /* Olive color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 15px;
+            flex-grow: 1;
+            justify-content: space-evenly; /* Aligns items on left and right */
+        }
+
+        nav .submark-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0; /* Prevents the logo from shrinking */
+        }
+
+        nav img {
+            max-height: 60px; /* Set the height of the logo */
+            object-fit: contain; /* Ensures the logo fits within its container */
+        }
+
+        nav a {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: #F0EDE5;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 10px 15px; /* Same padding here */
+    position: relative;
+    z-index: 1;
+    background-image: none; /* Ensures no background image by default */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s ease, color 0.3s ease; /* Adds smooth transition */
+}
+
+nav a.hover-effect:hover {
+    color: #DFD3B5;
+    background-image: url('./hover.png'); /* Add background on hover */
+}
+
+
+        .centered-logo {
+            margin: 0 40px;
+        }
+
+        .submark-centered {
+            width: 40px;
+            height: auto;
+        }
+
+        /* Button Styling with Hover Effects */
+        button {
+            background-color: #8FB0A9; /* Muted Green */
+            color: #F0EDE5;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #C6A57B; /* Warm Gold */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Intro Section Styling */
+        .intro-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+        }
+
+        .intro-image {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-picture {
+            width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-text {
+            flex: 1.5;
+            background-color: #F9F5EC;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 0;
+            margin-left: -100px; /* Overlaps the image */
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .intro-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #5A5A44;
+        }
+
+        /* Image Card Styling with Flexbox for two-column layout */
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Crop the images to fit the box */
+            border-radius: 10px;
+        }
+
+        /* Pricing Table Styling */
+        .price-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 15px 20px;
+            text-align: left;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .price-table th {
+            background-color: #6C7753; /* Olive tone */
+            color: #F0EDE5;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
+            color: #4B4B3E; /* Deep Olive Green */
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: #F9F5EC; /* Light beige alternate row color */
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px double #8FB0A9; /* Muted Green */
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        /* Contact Form Container */
+        .contact-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Title */
+        .contact-container h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: #5A5A44;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form Fields */
+        .contact-container label {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            outline: none;
+            border-color: #C6A57B; /* Focus color */
+        }
+
+        /* Flexbox styling for the radio group */
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label {
+            font-size: 1.1rem;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        /* Submit Button */
+        .contact-container button {
+            background-color: #8FB0A9;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-container button:hover {
+            background-color: #C6A57B;
+        }
+
+        /* Contact Table Styled Like the Pricing Table */
+        .contact-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .contact-table th,
+        .contact-table td {
+            padding: 15px 20px;
+            text-align: left;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.1rem;
+            color: #4B4B3E; /* Deep Olive Green */
+        }
+
+        .contact-table th {
+            background-color: #6C7753; /* Olive tone */
+            color: #F0EDE5;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-table td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .contact-table tr:nth-child(even) {
+            background-color: #F9F5EC; /* Light beige alternate row color */
+        }
+
+        .contact-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Container for table */
+        .table-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #4B4B3E;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #F0EDE5;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <a href="index.html">
+            <img src="./juniper-logo-svg-w.svg" alt="Juniper Siivouspalvelut" aria-label="Logo">
+        </a>
+    </div>
+
+    <!-- Sticky Navigation with Centered Submark -->
+    <nav>
+        <div class="nav-links">
+            <a href="#esittely" class="hover-effect">Esittely</a>
+            <a href="#palvelut" class="hover-effect">Palvelut</a>
+        </div>
+
+        <div class="submark-center">
+            <a href="index.html"><img src="./oksat.png" alt="Submark" aria-label="Juniper Siivouspalvelut Submark"></a>
+        </div>
+
+        <div class="nav-links">
+            <a href="#hinnasto" class="hover-effect">Hinnasto</a>
+            <a href="#yhteydenotto" class="hover-effect">Yhteydenotto</a>
+        </div>
+    </nav>
+
+    <!-- Home Section with Background Image and Overlay -->
+    <section id="etusivu">
+        <h1>Ammattimaiset siivouspalvelut</h1>
+        <p>Rovaniemen alueella koti- ja yrityssiivouksia, sekä suurempia ja pienempiä siivousprojekteja.</p>
+        <a href="#hinnasto"><button>Hinnasto</button></a>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="esittely">
+        <h2><i class="fas fa-address-book"></i> Esittely</h2>
+        <div class="intro-container">
+            <div class="intro-image">
+                <img src="https://st2.depositphotos.com/4232343/8203/i/950/depositphotos_82035308-stock-photo-attractive-young-stay-at-home.jpg" alt="Julia Nikkola" class="profile-picture">
+            </div>
+            <div class="intro-text">
+                <h3>Tietoa Minusta</h3>
+                <p>Olen <a href="#esittely">Julia Nikkola</a>, siivousalan ammattilainen, jolla on vahva kokemus erilaisten tilojen siivoamisesta. Panostan huolellisuuteen ja ympäristöystävällisiin ratkaisuihin, jotka tukevat kestävää kehitystä.</p>
+                <h3>Tietoa Yrityksestäni</h3>
+                <p>Juniper Siivouspalvelut on perustettu intohimosta siivoamiseen. Tarjoamme asiakkaillemme räätälöityjä siivousratkaisuja, jotka sopivat jokaisen asiakkaan yksilöllisiin tarpeisiin. Tavoitteemme on helpottaa arkea tarjoamalla luotettavaa ja laadukasta siivouspalvelua.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Image Cards -->
+    <section id="palvelut">
+        <h2><i class="fas fa-leaf"></i> Palvelut</h2>
+        <p>Kokemukseni on karttunut niin koti- kuin laitosympäristöistä. Pidän etenkin haastavista siivouskeikoista, joissa pääsen kokeilemaan laitoshuoltajakoulutuksesta opittuja teoria- ja tekniikkakäytäntöjä.</p>
+        <div class="services-container">
+            <div class="card">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2269-1024x1536.jpg" alt="Ylläpitosiivous Image">
+                <h3>Ylläpitosiivous</h3>
+                <p>Toistuvaa tai kertaluonteista tavallisen tason siivouspalvelua. Ylläpitosiivoukselle luonteenomaista on siisteyden ylläpito.</p>
+            </div>
+            <div class="card">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2262-1024x1536.jpg" alt="Perussiivous Image">
+                <h3>Perussiivous</h3>
+                <p>Yksittäinen, erikseen sovittavaa ja raskaampi siivous. Sovitun siisteystason palauttaminen tai saavuttaminen.</p>
+            </div>
+            <div class="card">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2262-1024x1536.jpg" alt="Tahranpoisto Image">
+                <h3>Tahranpoisto</h3>
+                <p>Erityistä siivousta tai puhdistusta vaativa kohde. Esimerkiksi: nuuskat, purkat, kalkinpoisto, pinttymmät, huonekalujen puhdistus, erityisainepuhdistukset, erityisvälineet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="hinnasto">
+        <h2><i class="fas fa-euro-sign"></i> Hinnasto</h2>
+        <p>Hinnat sisältävät alv 25,5%. Matkakulut lasketaan osoitteesta Kansankatu 4.</p>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Palvelu</th>
+                    <th>Hinta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tuntihinta</td>
+                    <td>50,00€ / tunti</td>
+                </tr>
+                <tr>
+                    <td>Pyhät ja viikonloput</td>
+                    <td>+ 20,00€ / kerta</td>
+                </tr>
+                <tr>
+                    <td>Matkakulut</td>
+                    <td>Ilmainen (jos alle 10 km)</td>
+                </tr>
+                <tr>
+                    <td>Kilometrikorvaus</td>
+                    <td>+ 0,50€ / ylittyvä km</td>
+                </tr>
+                <tr>
+                    <td>Paperilaskutus</td>
+                    <td>+ 1,00€</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Hintoihin ei tule erillisiä käynti- tai pesuainemaksuja. Käytän omia pesuaineita ja siivousvälineitä. Imurin käytössä suosin hygieniasyistä mielummin asiakkaan omaa imuria, mutta erillisestä pyynnöstä voin tuoda oman imurin. Tästä ei tule erillistä maksua.</p>
+
+        <p>Minimitilaus on 1 tunti. Hinnat pyöristetään 30 min tarkkuudella.</p>
+
+        <hr>
+
+        <p>Jos tarvitset aika-arvion, kerrothan rehellisesti tilan koon ja kunnon. Karkeasti laskettuna aikaa kuluu ylläpitosiivouksissa n. 1 - 1,5h / 20 m2, riippuen kalustus- ja kuntotasosta. Perussiivouksia varten aikaa menee enemmän ja silloin suosittelen pyytämään minulta aika-arvion tai tarjoamaan budjetin.</p>
+
+        <p>Airbnb-siivouksista voit pyytää tarjouksen suoraan sähköpostitse.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="yhteystiedot">
+        <h2><i class="fas fa-address-card"></i> Yhteystiedot</h2>
+
+        <div class="table-container">
+            <table class="contact-table">
+                <tr>
+                    <th>Nimi</th>
+                    <td>Juniper Siivouspalvelut, Julia Nikkola</td>
+                </tr>
+                <tr>
+                    <th>Sähköposti</th>
+                    <td>juniper.siivouspalvelut@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Puhelinnumero</th>
+                    <td>045 78 323 667</td>
+                </tr>
+                <tr>
+                    <th>Osoite</th>
+                    <td>Kansankatu 4, 96100 Rovaniemi</td>
+                </tr>
+                <tr>
+                    <th>Y-tunnus</th>
+                    <td>3466188-6</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Kun haluat varata ajan tai pyytää hinta-arvion, ota minuun yhteyttä joko puhelimitse työaikana tai sähköpostilla koska vain. Myös WhatsAppin kautta vastaan mielelläni ja otan vastaan ajanvarauksia. Myöhemmin tulossa on myös sähköinen ajanvarauskalenteri! Voit myös täyttää yhteydenottopyynnön alla olevalla lomakkeella ja olen sinuun yhteydessä mahdollisimman pian.</p>
+
+        <div class="contact-container">
+            <h2>Yhteydenottopyyntö</h2>
+            <form action="submit-form.php" method="POST">
+                <label for="name">Nimi *</label>
+                <input type="text" id="name" name="name" placeholder="Nimi" required>
+
+                <label for="email">Sähköposti / puhelinnumero</label>
+                <input type="email" id="email" name="email" placeholder="Sähköposti / puhelinnumero">
+
+                <label for="subject">Aihe</label>
+                <input type="text" id="subject" name="subject" placeholder="Aihe">
+
+                <label for="message">Viesti *</label>
+                <textarea id="message" name="message" rows="6" placeholder="Kirjoita viestisi tähän" required></textarea>
+
+                <!-- Question with Multiple Options (Radio Buttons) using Flexbox -->
+                <label for="contact-method">Valitse haluamasi tapa vastaukselle</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="contact-method" value="calling" required> Puhelu</label>
+                    <label><input type="radio" name="contact-method" value="texting"> Tekstiviesti</label>
+                    <label><input type="radio" name="contact-method" value="whatsapp"> WhatsApp</label>
+                    <label><input type="radio" name="contact-method" value="email"> Sähköposti</label>
+                </div>
+
+                <button type="submit">Lähetä</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; <i>2024 Juniper Siivouspalvelut. All rights reserved.</i>
+    </footer>
+
+</body>
+
+</html>
