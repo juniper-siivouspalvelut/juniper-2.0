@@ -91,8 +91,8 @@
         }
 
         .logo img {
-            width: auto; /* Big logo */
-            height: 300px;
+            width: 40%; /* Big logo */
+            height: auto;
             transition: transform 0.9s ease;
         }
 
@@ -154,18 +154,41 @@
 nav a.hover-effect:hover {
     color: #DFD3B5;
     background-image: url('./merkki.svg'); /* Add background on hover */
-    opacity: 0.5;
+    opacity: 0.5;}
+    
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #F0EDE5;
+    margin-left: 1rem;
 }
 
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #6C7753;
+    overflow: hidden;
+    transition: width 0.3s;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    z-index: 1001;
+}
 
-        .centered-logo {
-            margin: 0 40px;
-        }
-
-        .submark-centered {
-            width: 40px;
-            height: auto;
-        }
+.mobile-menu a {
+    display: block;
+    margin: 1rem 0;
+    color: #F0EDE5;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+    
 
         /* Button Styling with Hover Effects */
         button {
@@ -209,7 +232,7 @@ nav a.hover-effect:hover {
 
         .intro-text {
             flex: 1.5;
-            background-color: #F9F5EC;
+            background-color: #fff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -381,6 +404,27 @@ nav a.hover-effect:hover {
             background-color: #C6A57B;
         }
 
+        /* Styling for the Privacy Notice */
+.privacy-notice {
+    font-size: 0.9rem;
+    color: #4B4B3E; /* Matches the form's color theme */
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
+}
+
+.privacy-notice a {
+    color: #8FB0A9; /* Muted green for the link */
+    text-decoration: underline; /* Makes the link stand out */
+}
+
+.privacy-notice a:hover {
+    color: #C6A57B; /* Optional hover effect for the link */
+}
+
+
         /* Contact Table Styled Like the Pricing Table */
         .contact-table {
             width: 100%;
@@ -427,6 +471,27 @@ nav a.hover-effect:hover {
             text-align: center;
         }
 
+        .thank-you-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .thank-you-container h2 {
+            color: #5A5A44; 
+            font-size: 2rem;
+        }
+        
+        .thank-you-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .thank-you-container a {
+            color: #8FB0A9;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
         
         .comparison-table {
             width: 100%;
@@ -549,5 +614,50 @@ nav a.hover-effect:hover {
             letter-spacing: 1px;
             color: #F0EDE5;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem;        }
+    
+    @media screen and (max-width: 850px) {
+        .intro-container {
+            display: flex;
+            flex-direction: column;
         }
+
+        nav .nav-links {
+            display: none; /* Hide the nav links */
+        }
+
+        .menu-icon {
+            display: block; /* Show the menu icon */
+        }
+    }
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    section {
+        padding: 3rem;
+    }
+    
+    #esittely, #palvelut, .services-container, #hinnasto, #yhteystiedot {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .profile-picture {
+        max-width: 300px;
+    }
+    .intro-text {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Open the sliding menu */
+.mobile-menu.open {
+    display: block;
+    width: 250px; /* Adjust the width as desired */
+    text-align: center;
+}
+    

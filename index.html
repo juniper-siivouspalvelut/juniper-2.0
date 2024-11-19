@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Juniper Siivouspalvelut offers professional cleaning services in Rovaniemi for homes and businesses. Discover our eco-friendly solutions tailored to your needs.">
+    <meta name="description" content="Juniper Siivouspalvelut tarjoaa laadukkaita siivouspalveluja Rovaniemen alueella.">
     <title>Juniper Siivouspalvelut</title>
     <link rel="icon" href="./oksat.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <!-- Logo Section -->
     <div class="logo">
         <a href="index.html">
-            <img src="./idea2-polut.svg" alt="Juniper Siivouspalvelut" aria-label="Logo">
+            <img src="./juniper-logo.svg" alt="Juniper Siivouspalvelut" aria-label="Logo">
         </a>
     </div>
 
@@ -28,13 +28,25 @@
             <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
             <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
         </div>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Unicode for menu icon (hamburger icon) -->
+        </div>
+    
     </nav>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#esittely" class="hover-effect">Esittely</a>
+        <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
+        <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
+        <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
+    </div>
 
     <!-- Home Section with Background Image and Overlay -->
     <section id="etusivu">
         <h1>Ammattimaiset siivouspalvelut</h1>
         <p>Rovaniemen alueella koti- ja yrityssiivouksia, airbnb-siivouksia, sekä suurempia ja pienempiä siivousprojekteja.</p>
-        <a href="index.html#hinnasto"><button>Hinnasto</button></a>
+        <a href="./index.html#hinnasto"><button>Hinnasto</button></a>
     </section>
 
     <!-- Introduction Section -->
@@ -59,17 +71,17 @@
         <p>Kokemukseni on karttunut niin koti- kuin laitosympäristöistä. Pidän etenkin haastavista siivouskeikoista, joissa pääsen kokeilemaan laitoshuoltajakoulutuksesta opittuja teoria- ja tekniikkakäytäntöjä. Jos olet epävarma minkä tasoista siivousta kaipaat, voit huoletta olla minuun henkilökohtaisesti yhteydessä tai jättää yhteydenottopyynnön. Klikkaa näitä kortteja palvelukuvaukseen.</p>
         <div class="services-container">
             <div class="card" onclick="navigateTo('palvelut.html#siivoustaso')">
-                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2269-1024x1536.jpg" alt="Kotisiivous">
+                <img src="./kuvitus/good-soul-shop-unsplash.jpg" alt="Kotisiivous">
                 <h3>Kotisiivous</h3>
                 <p>Palveluihin kuuluvat eri tasoiset koti- ja muuttosiivoukset. Myös kodinomaisten yritysten siivous onnistuu. Jos toimit yrityksen puolesta, pyydä tarjous erikseen.</p>
             </div>
             <div class="card" onclick="navigateTo('palvelut.html#airbnb')">
-                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2262-1024x1536.jpg" alt="Majoitussiivous">
+                <img src="./kuvitus/hiroshi-kimura-unsplash.jpg" alt="Majoitussiivous">
                 <h3>Majoitussiivous</h3>
                 <p>AirBnB- ja muiden majoituskohteiden siivoukset toimivat ajanvarauskalenterin kautta. Voit ostaa yksittäisen siivouksen tai toistuvaa palvelua helposti kalenterin kautta.</p>
             </div>
             <div class="card" onclick="navigateTo('palvelut.html#tahranpoisto')">
-                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-2262-1024x1536.jpg" alt="Tahranpoisto">
+                <img src="./kuvitus/pexels-blue-bird.jpg" alt="Tahranpoisto">
                 <h3>Tahranpoisto</h3>
                 <p>Erityistä siivousta tai puhdistusta vaativat kohteet. Esimerkiksi käytetyn sohvan peseminen, puuhuonekalun puhdistus tai muu pienempi projekti.</p>
             </div>
@@ -156,12 +168,12 @@
 
         <div class="contact-container">
             <h2>Yhteydenottopyyntö</h2>
-            <form action="submit-form.php" method="POST">
+            <form action="./submit-form.php" method="POST">
                 <label for="name">Nimi *</label>
                 <input type="text" id="name" name="name" placeholder="Nimi" required>
 
-                <label for="email">Sähköposti / puhelinnumero</label>
-                <input type="email" id="email" name="email" placeholder="Sähköposti / puhelinnumero">
+                <label for="email">Sähköposti / puhelinnumero *</label>
+                <input type="text" id="email" name="email" placeholder="Sähköposti / puhelinnumero" required>
 
                 <label for="subject">Aihe</label>
                 <input type="text" id="subject" name="subject" placeholder="Aihe">
@@ -172,11 +184,17 @@
                 <!-- Question with Multiple Options (Radio Buttons) using Flexbox -->
                 <label for="contact-method">Valitse haluamasi tapa vastaukselle</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="contact-method" value="calling" required> Puhelu</label>
+                    <label><input type="radio" name="contact-method" value="calling"> Puhelu</label>
                     <label><input type="radio" name="contact-method" value="texting"> Tekstiviesti</label>
                     <label><input type="radio" name="contact-method" value="whatsapp"> WhatsApp</label>
                     <label><input type="radio" name="contact-method" value="email"> Sähköposti</label>
                 </div>
+
+                <!-- Privacy Notice -->
+                <p class="privacy-notice">
+                    Lähettämällä tämän lomakkeen hyväksyt, että tietosi tallennetaan asiakaspalvelua ja yhteydenpitoa varten. Lisätietoja löydät tästä 
+                    <a href="./tietosuojaseloste.html" target="_blank">tietosuojaselosteesta</a>.
+                </p>
 
                 <button type="submit">Lähetä</button>
             </form>
@@ -189,10 +207,23 @@
         &copy; <i>2024 Juniper Siivouspalvelut. All rights reserved.</i>
     </footer>
 
-    <script>
+<script>
         function navigateTo(url) {
             window.location.href = url;
         }
+
+        function toggleMenu() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("open");
+        }
+
+        // Close menu when clicking any link inside it
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.remove("open");
+    });
+});
+
     </script>
 
 </body>
