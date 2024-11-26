@@ -376,7 +376,7 @@ table thead {
     /* Container for table */
 
 .contact-table, .price-table {
-    width: 60%; 
+    width: 70%; 
     /* max-width: 900px;  */
     /* margin: 0 auto; */
     border-collapse: collapse;
