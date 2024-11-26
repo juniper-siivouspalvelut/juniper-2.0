@@ -17,6 +17,18 @@ body {
     color: #4B4B3E; /* tumma oliivi */
 }
 
+h2 {
+    font-size: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: #5A5A44;
+}
+
+h2 i {
+    color: #C6A57B;
+    margin-right: 10px;
+}
+
 
 /*  logon tyylit  */
 
