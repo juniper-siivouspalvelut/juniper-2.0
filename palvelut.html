@@ -21,14 +21,33 @@
     </div>
 
     <!-- Sticky Navigation with Centered Submark -->
-    <nav>
-        <div class="nav-links">
-            <a href="index.html#esittely" class="hover-effect">Esittely</a>
-            <a href="index.html##palvelut" class="hover-effect">Palvelut</a>
-            <a href="index.html##hinnasto" class="hover-effect">Hinnasto</a>
-            <a href="index.html##yhteydenotto" class="hover-effect">Yhteydenotto</a>
-        </div>
-    </nav>
+    <header>
+        <!-- linkkirivi -->
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html" class="hover-effect">Etusivu</a>
+                    <a href="index.html#esittely" class="hover-effect">Esittely</a>
+                    <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
+                    <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
+                    <a href="index.html#yhteystiedot" class="hover-effect">Yhteystiedot</a>
+                </div>
+                
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776; <!-- hamppari -->
+                </div>
+            
+            </nav>
+            
+            <!-- linkkirivi jos pieni näyttö -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="hover-effect">Etusivu</a>
+                <a href="index.html#esittely" class="hover-effect">Esittely</a>
+                <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
+                <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
+                <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
+            </div>
+        
+            </header>
     
 
     <section id="siivoustaso">
@@ -180,6 +199,30 @@
     <footer>
         &copy; <i>2024 Juniper Siivouspalvelut. All rights reserved.</i>
     </footer>
+
+
+
+        <!-- jskoodit -->
+<script>
+    // avaa ikkuna
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+
+    // hampparimenu
+    function toggleMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("open");
+    }
+
+    // hampparimenu pois päältä kun avaa linkin
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.remove("open");
+});
+});
+
+</script>
 
 </body>
 
