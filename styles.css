@@ -17,6 +17,11 @@ body {
     color: #4B4B3E; /* tumma oliivi */
 }
 
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+}
+
 h2 {
     font-size: 2rem;
     font-family: 'Work Sans', sans-serif;
@@ -178,7 +183,7 @@ button:hover {
 
 /* koko sivun levyiset sectionit */
 section {
-    padding: 5%;
+    padding: 5% 10%;
     border-bottom: 1px solid #ddd; /* lähes valkoinen */
 }
 
@@ -206,6 +211,8 @@ section#etusivu * {
 /* ### ESITTELY ### */
 
 #esittely {
+    display: flex;
+    flex-direction: column;
     padding: 5%;
 }
 
@@ -216,7 +223,7 @@ section#etusivu * {
     justify-items: center;
     width: 100%;
     height: auto;
-    /* gap: 40px; */
+    gap: 40px;
     /* position: relative; */
 }
 
@@ -242,7 +249,7 @@ section#etusivu * {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 50%; /* puolikas */
+    /* width: 50%;  */
     height: auto;
     flex: 1.5;
     background-color: #fff; /* valkoinen */
@@ -366,7 +373,7 @@ table thead {
 }
 
 .contact-table, .price-table {
-    width: 100%; 
+    width: 60%; 
     /* max-width: 900px;  */
     /* margin: 0 auto; */
     border-collapse: collapse;
@@ -654,6 +661,19 @@ color: #6C7753;
 
 @media screen and (max-width: 850px) {
 
+    #esittely {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 5%
+    }
     nav .nav-links {
         display: none; /* Hide the nav links */
     }
@@ -662,16 +682,18 @@ color: #6C7753;
     }
 
 
-
     .services-container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
 
+    .contact-table, .price-table {
+        width: 100%;
+    }
 
     .contact-table th, .contact-table td, .price-table th, .price-table td {
-        font-size: 0.7em;
+        font-size: 0.7rem;
         padding: 1vw 1vw;
         text-align: left;
     }
