@@ -1,0 +1,11 @@
+nettisivu värit
+#F0EDE5; /* vaalea beige */
+#DFD3B5; /* tummempi beige */
+#4B4B3E; /* tumma oliivi */
+#6C7753; /* vaalea oliivi */
+#8FB0A9; /* sinivihreä */
+#C6A57B; /* lämmin beige */
+#ddd; /* lähes valkoinen */
+#F9F5EC; /* lämmin valkoinen */
+#fff; /* valkoinen */
+#5A5A44; /* vaalea ruskea */

@@ -13,6 +13,8 @@
 
 <body>
 
+    <main>
+
     <!-- Logo Section -->
     <div class="logo">
         <a href="index.html">
@@ -20,21 +22,23 @@
         </a>
     </div>
 
-    <!-- Sticky Navigation with Centered Submark -->
+    <header>
+<!-- linkkirivi -->
     <nav>
         <div class="nav-links">
             <a href="index.html#esittely" class="hover-effect">Esittely</a>
             <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
             <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
-            <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
+            <a href="index.html#yhteystiedot" class="hover-effect">Yhteystiedot</a>
         </div>
         
         <div class="menu-icon" onclick="toggleMenu()">
-            &#9776; <!-- Unicode for menu icon (hamburger icon) -->
+            &#9776; <!-- hamppari -->
         </div>
     
     </nav>
     
+    <!-- linkkirivi jos pieni näyttö -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html#esittely" class="hover-effect">Esittely</a>
         <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
@@ -42,44 +46,63 @@
         <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
     </div>
 
-    <!-- Home Section with Background Image and Overlay -->
+    </header>
+
+    <!-- etusivu, jossa takana hero-kuva -->
     <section id="etusivu">
         <h1>Ammattimaiset siivouspalvelut</h1>
+
         <p>Rovaniemen alueella koti- ja yrityssiivouksia, airbnb-siivouksia, sekä suurempia ja pienempiä siivousprojekteja.</p>
         <a href="./index.html#hinnasto"><button>Hinnasto</button></a>
     </section>
 
-    <!-- Introduction Section -->
+    <!-- esittelyosa -->
     <section id="esittely">
         <h2><i class="fas fa-address-book"></i> Esittely</h2>
+
         <div class="intro-container">
+            <!-- kuva vasemmalla-->
             <div class="intro-image">
                 <img src="./julia_nikkola.jpg" alt="Julia Nikkola" class="profile-picture">
             </div>
+
+            <!-- teksti oikealla-->
             <div class="intro-text">
-                <h3>Tietoa minusta</h3>
-                <p>Olen <b>Julia Nikkola</b>, rovaniemeläistynyt siivousalan ammattilainen, jolla on vahva kokemus erilaisten tilojen siivoamisesta. Olen suorittanut mm. laitoshuoltajatutkinnon eri osia ja ollut töissä esimerkiksi SOL:lla, päiväkodissa, kotisiivousyrityksessä, Kilpisjärven biologisella tutkimusasemalla ja tällä hetkellä teen keikkaluontoisesti erilaisia siivousprojekteja Rovaniemen alueella.</p>
-                <h3>Yrityksestäni</h3>
-                <p><b>Juniper Siivouspalvelut</b> perustin intohimosta siivoamiseen. Panostan työni laatuun ja pyrin aina tekemään erinomaista työtä tarjotun ajan puitteissa. Tämä toiminimi tarjoaa asiakkaille räätälöityjä ja henkilökohtaisia siivousratkaisuja, jotka sopivat erilaisiin tarpeisiin. Pyrin kohtaamaan asiakkaat hienotunteisesti ja positiivisen kautta, joten vaativammatkaan kohteet eivät ole ongelma. Ota yhteyttä ja varataan yhdessä ensimmäinen siivouskäynti!</p>
-            </div>
+                <!-- eka kappale-->
+                <div>
+                    <h3>Tietoa minusta</h3>
+                    <p>Olen <b>Julia Nikkola</b>, rovaniemeläistynyt siivousalan ammattilainen, jolla on vahva kokemus erilaisten tilojen siivoamisesta. Olen suorittanut mm. laitoshuoltajatutkinnon eri osia ja ollut töissä esimerkiksi SOL:lla, päiväkodissa, kotisiivousyrityksessä, Kilpisjärven biologisella tutkimusasemalla ja tällä hetkellä teen keikkaluontoisesti erilaisia siivousprojekteja Rovaniemen alueella.</p>
+                </div>
+
+                <!-- toka kappale-->
+                 <div>
+                    <h3>Yrityksestäni</h3>
+                    <p><b>Juniper Siivouspalvelut</b> perustin intohimosta siivoamiseen. Panostan työni laatuun ja pyrin aina tekemään erinomaista työtä tarjotun ajan puitteissa. Tämä toiminimi tarjoaa asiakkaille räätälöityjä ja henkilökohtaisia siivousratkaisuja, jotka sopivat erilaisiin tarpeisiin. Pyrin kohtaamaan asiakkaat hienotunteisesti ja positiivisen kautta, joten vaativammatkaan kohteet eivät ole ongelma. Ota yhteyttä ja varataan yhdessä ensimmäinen siivouskäynti!</p>
+                </div>
+
         </div>
+
     </section>
 
-    <!-- Services Section with Image Cards -->
+    <!-- palvelut-esittely, klikattavat kortit alla -->
     <section id="palvelut">
         <h2><i class="fas fa-leaf"></i> Palvelut</h2>
         <p>Kokemukseni on karttunut niin koti- kuin laitosympäristöistä. Pidän etenkin haastavista siivouskeikoista, joissa pääsen kokeilemaan laitoshuoltajakoulutuksesta opittuja teoria- ja tekniikkakäytäntöjä. Jos olet epävarma minkä tasoista siivousta kaipaat, voit huoletta olla minuun henkilökohtaisesti yhteydessä tai jättää yhteydenottopyynnön. Klikkaa näitä kortteja palvelukuvaukseen.</p>
+
         <div class="services-container">
+            <!-- eka kortti omassa divissä-->
             <div class="card" onclick="navigateTo('palvelut.html#siivoustaso')">
                 <img src="./kuvitus/good-soul-shop-unsplash.jpg" alt="Kotisiivous">
                 <h3>Kotisiivous</h3>
                 <p>Palveluihin kuuluvat eri tasoiset koti- ja muuttosiivoukset. Myös kodinomaisten yritysten siivous onnistuu. Jos toimit yrityksen puolesta, pyydä tarjous erikseen.</p>
             </div>
+            <!-- toka kortti omassa divissä-->
             <div class="card" onclick="navigateTo('palvelut.html#airbnb')">
                 <img src="./kuvitus/hiroshi-kimura-unsplash.jpg" alt="Majoitussiivous">
                 <h3>Majoitussiivous</h3>
                 <p>AirBnB- ja muiden majoituskohteiden siivoukset toimivat ajanvarauskalenterin kautta. Voit ostaa yksittäisen siivouksen tai toistuvaa palvelua helposti kalenterin kautta.</p>
             </div>
+            <!-- kolmas kortti omassa divissä-->
             <div class="card" onclick="navigateTo('palvelut.html#tahranpoisto')">
                 <img src="./kuvitus/pexels-blue-bird.jpg" alt="Tahranpoisto">
                 <h3>Tahranpoisto</h3>
@@ -88,17 +111,21 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- hinnasto-osa, taulukossa -->
     <section id="hinnasto">
         <h2><i class="fas fa-euro-sign"></i> Hinnasto</h2>
         <p>Hinnat sisältävät alv 25,5%. Matkakulut lasketaan osoitteesta Kansankatu 4.</p>
+
+        <!-- taulukko alkaa -->
         <table class="price-table">
+            <!-- otsikot -->
             <thead>
                 <tr>
                     <th>Palvelu</th>
                     <th>Hinta</th>
                 </tr>
             </thead>
+            <!-- sisältö -->
             <tbody>
                 <tr>
                     <td>Tuntihinta</td>
@@ -122,6 +149,7 @@
                 </tr>
             </tbody>
         </table>
+
         <p>Hintoihin <b>ei tule erillisiä käynti- tai pesuainemaksuja</b>. Käytän <b>omia pesuaineita ja siivousvälineitä</b>. Imurin käytössä suosin hygieniasyistä mielummin <b>asiakkaan omaa imuria</b>, mutta erillisestä pyynnöstä voin tuoda oman imurin. Tästä ei tule erillistä maksua.</p>
 
         <p>Minimitilaus on <b>1 tunti</b>. Hinnat pyöristetään 30 min tarkkuudella.</p>
@@ -133,10 +161,11 @@
         <p><b>Airbnb-siivouksista</b> voit pyytää tarjouksen suoraan sähköpostitse.</p>
     </section>
 
-    <!-- Contact Section -->
+    <!-- yhteystietojuttu -->
     <section id="yhteystiedot">
         <h2><i class="fas fa-address-card"></i> Yhteystiedot</h2>
 
+        <!-- yhteystietolaatikko, otsikko ja sisältö näkyy vierekkäin -->
         <div class="table-container">
             <table class="contact-table">
                 <tr>
@@ -168,20 +197,25 @@
 
         <div class="contact-container">
             <h2>Yhteydenottopyyntö</h2>
+            <!-- js -->
             <form action="./submit-form.php" method="POST">
+                <!-- nimi pakollinen -->
                 <label for="name">Nimi *</label>
                 <input type="text" id="name" name="name" placeholder="Nimi" required>
 
+                <!-- email tai puhnro pakollinen, tekstimuodossa -->
                 <label for="email">Sähköposti / puhelinnumero *</label>
                 <input type="text" id="email" name="email" placeholder="Sähköposti / puhelinnumero" required>
 
+                <!-- aihe, ei pakollinen -->
                 <label for="subject">Aihe</label>
                 <input type="text" id="subject" name="subject" placeholder="Aihe">
 
+                <!-- viesti pakollinen -->
                 <label for="message">Viesti *</label>
                 <textarea id="message" name="message" rows="6" placeholder="Kirjoita viestisi tähän" required></textarea>
 
-                <!-- Question with Multiple Options (Radio Buttons) using Flexbox -->
+                <!-- radiobuttons vastaustavalle, flexboxilla, vain yksi vaihtoehto, ei pakollinen -->
                 <label for="contact-method">Valitse haluamasi tapa vastaukselle</label>
                 <div class="radio-group">
                     <label><input type="radio" name="contact-method" value="calling"> Puhelu</label>
@@ -190,7 +224,7 @@
                     <label><input type="radio" name="contact-method" value="email"> Sähköposti</label>
                 </div>
 
-                <!-- Privacy Notice -->
+                <!-- pikkuteksti tietosuojasta -->
                 <p class="privacy-notice">
                     Lähettämällä tämän lomakkeen hyväksyt, että tietosi tallennetaan asiakaspalvelua ja yhteydenpitoa varten. Lisätietoja löydät tästä 
                     <a href="./tietosuojaseloste.html" target="_blank">tietosuojaselosteesta</a>.
@@ -202,29 +236,35 @@
 
     </section>
 
-    <!-- Footer -->
+    <!-- footeri -->
     <footer>
         &copy; <i>2024 Juniper Siivouspalvelut. All rights reserved.</i>
     </footer>
 
+    </main>
+
+
+    <!-- jskoodit -->
 <script>
+        // avaa ikkuna
         function navigateTo(url) {
             window.location.href = url;
         }
 
+        // hampparimenu
         function toggleMenu() {
             const mobileMenu = document.getElementById("mobileMenu");
             mobileMenu.classList.toggle("open");
         }
 
-        // Close menu when clicking any link inside it
+        // hampparimenu pois päältä kun avaa linkin
         document.querySelectorAll(".mobile-menu a").forEach(link => {
         link.addEventListener("click", () => {
         document.getElementById("mobileMenu").classList.remove("open");
     });
 });
 
-    </script>
+</script>
 
 </body>
 
