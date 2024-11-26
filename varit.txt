@@ -9,3 +9,6 @@ nettisivu värit
 #F9F5EC; /* lämmin valkoinen */
 #fff; /* valkoinen */
 #5A5A44; /* vaalea ruskea */
+#A0A0A0; /* harmaa */
+#4CAF50 /* vihreä */
+#3D3D29; /* tummin oliivi */

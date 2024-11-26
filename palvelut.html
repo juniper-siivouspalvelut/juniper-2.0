@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Juniper Siivouspalvelut offers professional cleaning services in Rovaniemi for homes and businesses. Discover our eco-friendly solutions tailored to your needs.">
+    <meta name="description" content="Juniper Siivouspalvelut tarjoaa laadukkaita siivouspalveluja Rovaniemen alueella.">
     <title>Juniper Siivouspalvelut</title>
     <link rel="icon" href="./oksat.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+
+    <main>
 
     <!-- Logo Section -->
     <div class="logo">
@@ -20,206 +22,203 @@
         </a>
     </div>
 
-    <!-- Sticky Navigation with Centered Submark -->
     <header>
-        <!-- linkkirivi -->
-            <nav>
-                <div class="nav-links">
-                    <a href="index.html" class="hover-effect">Etusivu</a>
-                    <a href="index.html#esittely" class="hover-effect">Esittely</a>
-                    <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
-                    <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
-                    <a href="index.html#yhteystiedot" class="hover-effect">Yhteystiedot</a>
-                </div>
-                
-                <div class="menu-icon" onclick="toggleMenu()">
-                    &#9776; <!-- hamppari -->
-                </div>
-            
-            </nav>
-            
-            <!-- linkkirivi jos pieni näyttö -->
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="hover-effect">Etusivu</a>
-                <a href="index.html#esittely" class="hover-effect">Esittely</a>
-                <a href="index.html#palvelut" class="hover-effect">Palvelut</a>
-                <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
-                <a href="index.html#yhteydenotto" class="hover-effect">Yhteydenotto</a>
-            </div>
+<!-- linkkirivi -->
+    <nav>
+        <div class="nav-links">
+            <a href="index.html#esittely" class="hover-effect">Esittely</a>
+            <a href="palvelut.html" class="hover-effect">Palvelut</a>
+            <a href="index.html#hinnasto" class="hover-effect">Hinnasto</a>
+            <a href="index.html#yhteystiedot" class="hover-effect">Yhteystiedot</a>
+        </div>
         
-            </header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- hamppari -->
+        </div>
     
+    </nav>
+    
+    <!-- linkkirivi jos pieni näyttö -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#esittely">Esittely</a>
+        <a href="palvelut.html">Palvelut</a>
+        <a href="index.html#hinnasto">Hinnasto</a>
+        <a href="index.html#yhteydenotto">Yhteydenotto</a>
+    </div>
+
+    </header>
 
     <section id="siivoustaso">
-    <h2><i class="fa fa-asterisk"></i> Kotisiivouksen kaksi tasoa</h2>
-    <p>Teen eri tasoisia kotisiivouksia. Tavallinen, vähän kevyempi siivous on nimeltään <i>ylläpitosiivous</i> ja raskaampi ja perusteellisempi siivous on nimeltään <i>perussiivous.</i></p>
-
-    <p><b>Ylläpitosiivous</b> on pintojen kevyttä siivousta. Se sisältää pölyjen pyyhkimistä, mattojen imuroimista ja lattian pintapuolista puhdistusta. Siivouksen aikana voit olla rennosti kotona tai päästää minut sisälle ja tulla takaisin myöhemmin.</p>
-
-    <p><b>Perussiivous</b> on niin sanottu "suursiivous". Perussiivouksen voit tilata tiettyyn huoneeseen tai koko asuntoon. Tämän kaltainen siivous vie paljon aikaa ja aika-arvion antaminen voi olla liukuvampi kuin ylläpitosiivouksessa. Perussiivouksen aikana toivon, että saan tehdä rauhassa töitä. Esimerkiksi muuttosiivouksen aikana on hyvä, että tavarat on jo pakattuna muuttolaatikoihin tai vietynä pois asunnosta, jotta siivoaminen on mahdollisimman tehokasta.</p>
+        <h2><i class="fa fa-asterisk"></i> Kotisiivouksen kaksi tasoa</h2>
+        <p>Teen eri tasoisia kotisiivouksia. Tavallinen, vähän kevyempi siivous on nimeltään <i>ylläpitosiivous</i> ja raskaampi ja perusteellisempi siivous on nimeltään <i>perussiivous.</i></p>
     
-
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Palvelu</th>
-                <th>Ylläpitosiivous</th>
-                <th>Perussiivous</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Lattian imurointi ja/tai moppaus</td>
-                <td><span class="checkmark">✔</span></td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Taso- ja kosketuspintojen pyyhintä</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="180cm asti, tavaroita ei siirretä">(?)</span></td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Peilipintojen pyyhintä</td>
-                <td><span class="checkmark">✔</span></td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-
-            <tr>
-                <td>Wc-istuin ja käsienpesualtaat</td>
-                <td><span class="checkmark">✔</span></td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Suihkutilan pesu</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Pintapuolinen pyyhintä, seinistä pyyhitään näkyvät roiskeet">(?)</span></td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Sisältää myös seinien harjapesun">(?)</span></td>
-            </tr>
-            <tr>
-                <td>Saunan pesu</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Kevyt, pintapuolinen puhdistus">(?)</span></td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Syväpuhdistus, myös lauteiden alapinnat">(?)</span></td>
-            </tr>
-            <tr>
-                <td>Lieden ja uunin puhdistus</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Vain pintapuolelta">(?)</span></td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Mattojen tamppaus</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Listojen pyyhintä</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Ovien, kahvojen ja karmien pesu</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-
-            <tr>
-                <td>Ikkunanpesu</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Kalkinpoisto</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Tarvittaessa">(?)</span></td>
-            </tr>
-
-            <tr>
-                <td>Kodinkoneiden puhdistus</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Pyydettäessä esim. pesukoneiden puhdistus">(?)</span></td>
-            </tr>
-            <tr>
-                <td>Lattiakaivojen ja hajulukkojen pesu</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Hajulukot ja putkistojen tukokset pyydettäessä">(?)</span></td>
-            </tr>
-
-            <tr>
-                <td>Liesituulettimen pesu + suodatin</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Jääkaapin ja pakastimen sulatus ja pesu</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Kodinkoneiden taustan puhdistus</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-            <tr>
-                <td>Seinien, valaisimien ja katon pyyhintä</td>
-                <td class="not-included">-</td>
-                <td><span class="checkmark">✔</span></td>
-            </tr>
-        </tbody>
-    </table>
-    </section>
-
-    <section id="airbnb">
-        <h2><i class="fa fa-asterisk"></i> AirBnB-siivoukset</h2>
-        <p>Airbnb-, mökki- ja muut majoitustilojen siivoukset ovat tasoltaan <b>ylläpitosiivousta</b> (ks. sisältö ylemmästä taulukosta). Lisäksi palveluun kuuluu sänkyjen tai muiden petipaikkojen lakananvaihdot, petaukset ja erikseen sovittuna myös petivaatteiden pyykkääminen. Voit myös itse hoitaa pyykkäämisen, jolloin hinnasta saa pienen alennuksen.</p>
-        <p>Huomioithan, että majoituskohteissa en hoida yhteydenpitoa asiakkaiden kanssa tai esimerkiksi luovuta avaimia.</p>
-        <p>Mikäli työaikaa jää yli sovitun, se käytetään tilojen <b>perussiivoukseen</b> ja siivoustason nostamiseen.</p>
-    </section>
-
-
-
-    <section id="tahranpoisto">
-        <h2><i class="fa fa-asterisk"></i> Tahranpoisto</h2>  
-     
-        <p>Jos sinulla on jokin tietty yksittäinen asia, esine tai paikka, joka kaipaa siivousta, teen mielelläni myös pienempiä siivousprojekteja.</p>
+        <p><b>Ylläpitosiivous</b> on pintojen kevyttä siivousta. Se sisältää pölyjen pyyhkimistä, mattojen imuroimista ja lattian pintapuolista puhdistusta. Siivouksen aikana voit olla rennosti kotona tai päästää minut sisälle ja tulla takaisin myöhemmin.</p>
+    
+        <p><b>Perussiivous</b> on niin sanottu "suursiivous". Perussiivouksen voit tilata tiettyyn huoneeseen tai koko asuntoon. Tämän kaltainen siivous vie paljon aikaa ja aika-arvion antaminen voi olla liukuvampi kuin ylläpitosiivouksessa. Perussiivouksen aikana toivon, että saan tehdä rauhassa töitä. Esimerkiksi muuttosiivouksen aikana on hyvä, että tavarat on jo pakattuna muuttolaatikoihin tai vietynä pois asunnosta, jotta siivoaminen on mahdollisimman tehokasta.</p>
         
-        <ul class="example-list">
-            <li>Tiikkisen tai muun puisen esineen puhdistus/öljyäminen</li>
-            <li>Tekstiiliä sisältävän huonekalun pesu (esim. sohva, sängynpääty)</li>
-            <li>Ikkunoiden, karmien tai ikkunalautojen pesu</li>
-            <li>Etuoven puhdistus</li>
-            <li>Ilmanvaihtokanavien imurointi</li>
-            <li>Maton vieminen pesulaan tai peseminen paikan päällä</li>
-            <li>Varaston tai autotallin siivoaminen/järjestely</li>
-            <li>Steariinin poisto</li>
-            <li>Kalkki- ja saippuasaostumat</li>
-            <li>Hajulukkojen, pesualtaiden putkiston ja tukosten puhdistus</li>
-            <li>Nuuskatahrat</li>
-        </ul>
-    </section>
+    
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Palvelu</th>
+                    <th>Ylläpitosiivous</th>
+                    <th>Perussiivous</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lattian imurointi ja/tai moppaus</td>
+                    <td><span class="checkmark">✔</span></td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Taso- ja kosketuspintojen pyyhintä</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="180cm asti, tavaroita ei siirretä">(?)</span></td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Peilipintojen pyyhintä</td>
+                    <td><span class="checkmark">✔</span></td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+    
+                <tr>
+                    <td>Wc-istuin ja käsienpesualtaat</td>
+                    <td><span class="checkmark">✔</span></td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Suihkutilan pesu</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Pintapuolinen pyyhintä, seinistä pyyhitään näkyvät roiskeet">(?)</span></td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Sisältää myös seinien harjapesun">(?)</span></td>
+                </tr>
+                <tr>
+                    <td>Saunan pesu</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Kevyt, pintapuolinen puhdistus">(?)</span></td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Syväpuhdistus, myös lauteiden alapinnat">(?)</span></td>
+                </tr>
+                <tr>
+                    <td>Lieden ja uunin puhdistus</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Vain pintapuolelta">(?)</span></td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Mattojen tamppaus</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Listojen pyyhintä</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Ovien, kahvojen ja karmien pesu</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+    
+                <tr>
+                    <td>Ikkunanpesu</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Kalkinpoisto</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Tarvittaessa">(?)</span></td>
+                </tr>
+    
+                <tr>
+                    <td>Kodinkoneiden puhdistus</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Pyydettäessä esim. pesukoneiden puhdistus">(?)</span></td>
+                </tr>
+                <tr>
+                    <td>Lattiakaivojen ja hajulukkojen pesu</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span> <span class="tooltip" data-tooltip="Hajulukot ja putkistojen tukokset pyydettäessä">(?)</span></td>
+                </tr>
+    
+                <tr>
+                    <td>Liesituulettimen pesu + suodatin</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Jääkaapin ja pakastimen sulatus ja pesu</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Kodinkoneiden taustan puhdistus</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Seinien, valaisimien ja katon pyyhintä</td>
+                    <td class="not-included">-</td>
+                    <td><span class="checkmark">✔</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </section>
+    
+        <section id="airbnb">
+            <h2><i class="fa fa-asterisk"></i> AirBnB-siivoukset</h2>
+            <p>Airbnb-, mökki- ja muut majoitustilojen siivoukset ovat tasoltaan <b>ylläpitosiivousta</b> (ks. sisältö ylemmästä taulukosta). Lisäksi palveluun kuuluu sänkyjen tai muiden petipaikkojen lakananvaihdot, petaukset ja erikseen sovittuna myös petivaatteiden pyykkääminen. Voit myös itse hoitaa pyykkäämisen, jolloin hinnasta saa pienen alennuksen.</p>
+            <p>Huomioithan, että majoituskohteissa en hoida yhteydenpitoa asiakkaiden kanssa tai esimerkiksi luovuta avaimia.</p>
+            <p>Mikäli työaikaa jää yli sovitun, se käytetään tilojen <b>perussiivoukseen</b> ja siivoustason nostamiseen.</p>
+        </section>
+    
+    
+    
+        <section id="tahranpoisto">
+            <h2><i class="fa fa-asterisk"></i> Tahranpoisto</h2>  
+         
+            <p>Jos sinulla on jokin tietty yksittäinen asia, esine tai paikka, joka kaipaa siivousta, teen mielelläni myös pienempiä siivousprojekteja.</p>
+            
+            <ul class="example-list">
+                <li>Tiikkisen tai muun puisen esineen puhdistus/öljyäminen</li>
+                <li>Tekstiiliä sisältävän huonekalun pesu (esim. sohva, sängynpääty)</li>
+                <li>Ikkunoiden, karmien tai ikkunalautojen pesu</li>
+                <li>Etuoven puhdistus</li>
+                <li>Ilmanvaihtokanavien imurointi</li>
+                <li>Maton vieminen pesulaan tai peseminen paikan päällä</li>
+                <li>Varaston tai autotallin siivoaminen/järjestely</li>
+                <li>Steariinin poisto</li>
+                <li>Kalkki- ja saippuasaostumat</li>
+                <li>Hajulukkojen, pesualtaiden putkiston ja tukosten puhdistus</li>
+                <li>Nuuskatahrat</li>
+            </ul>
+        </section>
 
-    <!-- Footer -->
+    <!-- footeri -->
     <footer>
         &copy; <i>2024 Juniper Siivouspalvelut. All rights reserved.</i>
     </footer>
 
+    </main>
 
 
-        <!-- jskoodit -->
+    <!-- jskoodit -->
 <script>
-    // avaa ikkuna
-    function navigateTo(url) {
-        window.location.href = url;
-    }
+        // avaa ikkuna
+        function navigateTo(url) {
+            window.location.href = url;
+        }
 
-    // hampparimenu
-    function toggleMenu() {
-        const mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("open");
-    }
+        // hampparimenu
+        function toggleMenu() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("open");
+        }
 
-    // hampparimenu pois päältä kun avaa linkin
-    document.querySelectorAll(".mobile-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-    document.getElementById("mobileMenu").classList.remove("open");
-});
+        // hampparimenu pois päältä kun avaa linkin
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.remove("open");
+    });
 });
 
 </script>

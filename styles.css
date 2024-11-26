@@ -20,10 +20,20 @@ body {
 p {
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3D3D29; /* tummin oliivi */
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     color: #5A5A44;
@@ -34,6 +44,18 @@ h2 i {
     margin-right: 10px;
 }
 
+h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.75rem;
+    color: #6C6C58; /* vaalea oliivi */
+}
+
+hr {
+    border: none;
+    border-top: 3px double #8FB0A9; /* sinivihreä */
+    width: 70%;
+    margin: 20px auto;
+}
 
 /*  logon tyylit  */
 
@@ -80,7 +102,7 @@ header {
     justify-content: space-around;
     background-color: #6C7753; /* vaalea oliivi */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 7vh; /* navin korkeus 7pros */
+    height: 12vh; /* navin korkeus pros */
     position: sticky; /*jää yläreunaan */
     top: 0;
     z-index: 1000;
@@ -93,12 +115,12 @@ header {
 }
 
 /* navin linkkien muotoilu */
-nav a {
+nav a, .mobile-menu {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2.4px;
     color: #F0EDE5; /* vaalea beige */
-    font-size: 1.8vw;
+    font-size: 1.4vw;
     font-weight: 700; /* boldaus */
     margin: 0 15px; /* sivuille tilaa */
     text-decoration: none;
@@ -109,7 +131,6 @@ nav a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* transition: background-image 0.9s ease, color 0.9s ease;  */
 }
 
 nav a.hover-effect:hover {
@@ -156,31 +177,6 @@ nav a.hover-effect:hover {
 /* ### ETUSIVU ### */
 
 
-section#etusivu {
-    background-image: url('./hero.JPG');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: #ffffff;
-}
-
-/* nappi */
-button {
-    background-color: #8FB0A9; /* sinivihreä */
-    color: #F0EDE5; /* vaalea beige */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* pyöristetty */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    background-color: #C6A57B; /* lämmin beige */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
 /* koko sivun levyiset sectionit */
 section {
     padding: 5% 10%;
@@ -190,6 +186,15 @@ section {
 /* joka toinen eri värinen */
 section:nth-child(odd) {
     background-color: #F9F5EC; /* lämmin valkoinen */
+}
+
+section#etusivu {
+    background-image: url('./hero.JPG');
+    background-size: cover;
+    background-position: center;
+    padding: 8% 10%;
+    position: relative;
+    color: #ffffff;
 }
 
 section#etusivu::before {
@@ -208,12 +213,28 @@ section#etusivu * {
     z-index: 2;
 }
 
+/* nappi */
+button {
+    background-color: #8FB0A9; /* sinivihreä */
+    color: #F0EDE5; /* vaalea beige */
+    font-family: 'Lato', sans-serif; /* perusfontti, jos ei määritelty */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* pyöristetty */
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+button:hover {
+    background-color: #C6A57B; /* lämmin beige */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* ### ESITTELY ### */
 
 #esittely {
     display: flex;
     flex-direction: column;
-    padding: 5%;
 }
 
 .intro-container {
@@ -223,7 +244,6 @@ section#etusivu * {
     justify-items: center;
     width: 100%;
     height: auto;
-    gap: 40px;
     /* position: relative; */
 }
 
@@ -253,7 +273,7 @@ section#etusivu * {
     height: auto;
     flex: 1.5;
     background-color: #fff; /* valkoinen */
-    padding: 30px;
+    padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 0;
@@ -285,6 +305,10 @@ section#etusivu * {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card p {
+    font-size: 1rem;
+}
+
 .card img {
     width: 100%;
     height: 200px; /* kovakoodattu */
@@ -301,7 +325,6 @@ section#etusivu * {
 #hinnasto {
     display: flex;
     flex-direction: column;
-    /* gap: 40px; */
 }
 
 #hinnasto div {
@@ -313,77 +336,14 @@ table thead {
     text-align: left;
 }
 
-/* Pricing Table Styling */
-/* .price-table { 
-    width: 100%;
-    max-width: 900px; 
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden; 
-} */
-
-/* .price-table th,
-.price-table td {
-    padding: 15px 20px;
-    text-align: left;
-    font-family: 'Work Sans', sans-serif;
-} */
-
-/* .price-table th {
-    background-color: #6C7753; /* Olive tone
-    color: #F0EDE5;
-    font-size: 1.2rem;
-    font-weight: 600;
-} */
-
-/* .price-table td {
-    border-bottom: 1px solid #ddd;
-    font-size: 1.1rem;
-    color: #4B4B3E; /* Deep Olive Green
-} */
-
-/* .price-table tr:nth-child(even) {
-    background-color: #F9F5EC;
-}
-
-.price-table tr:last-child td {
-    border-bottom: none;
-} */
-
-/* hr {
-    border: none;
-    border-top: 3px double #8FB0A9;
-    width: 70%;
-    margin: 20px auto;
-} */
-
-
-
-/* 
- _______________
-|               |
-| contact form  |
-|_______________|
-
-*/
-
-
-
-/* Contact Table Styled Like the Pricing Table */
-    /* Container for table */
-
 .contact-table, .price-table {
-    width: 70%; 
-    /* max-width: 900px;  */
-    /* margin: 0 auto; */
+    width: 70vw; 
     border-collapse: collapse;
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 
@@ -396,6 +356,7 @@ table thead {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.1rem;
     color: #4B4B3E;
+    text-wrap: wrap;
 }
 
 .contact-table th, .price-table th {
@@ -415,27 +376,30 @@ table thead {
 
 .contact-table tr:last-child td, .price-table tr:last-child tr:last-child td {
     border-bottom: none;
-} */
+}
 
 
+/*
 
-
-/*   __________________________
-|                           |
-|  Contact Form Container   | 
-|___________________________|   
+### YHTEYDENOTTOLOMAKE ###
 
 */
     .contact-container {
-        display: flex;
+        width: 70%;
         margin: 50px auto;
         padding: 20px;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        word-wrap: normal;
     }
 
-    /* Form Title */
+    .table-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* laatikon otsikko */
     .contact-container h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 2.3rem;
@@ -445,7 +409,6 @@ table thead {
         margin-bottom: 20px;
     }
 
-    /* Form Fields */
     .contact-container label {
         font-size: 1.1rem;
         margin-bottom: 10px;
@@ -458,57 +421,73 @@ table thead {
         padding: 10px;
         margin-bottom: 20px;
         border: 1px solid #ddd;
-        border-radius: 5px;
+        border-radius: 10px;
         font-size: 1rem;
     }
 
     .contact-container input:focus,
     .contact-container textarea:focus {
         outline: none;
-        border-color: #C6A57B; /* Focus color */
+        border-color: #C6A57B; /* lämmin beige */
     }
 
-    /* Flexbox styling for the radio group */
+    /* valintakysymys */
     .radio-group {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
+        justify-content: space-around;
+        justify-items: center;
+        flex-wrap: wrap;
     }
 
     .radio-group label {
         font-size: 1.1em;
-        margin-right: 10px;
-        display: flex;
-        justify-content: center;
+
     }
 
-    .radio-group input[type="radio"] {
-        margin-right: 8px;
-    }
-
-    /* Submit Button */
+    /* lähetä-nappi */
     .contact-container button {
-        background-color: #8FB0A9;
+        background-color: #8FB0A9; /* sinivihreä */
         color: #ffffff;
         padding: 12px 20px;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
+        cursor: pointer; /* kertoo että on klikattava */
         font-size: 1.2rem;
         font-family: 'Montserrat', sans-serif;
         width: 100%;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.9s ease;
     }
 
     .contact-container button:hover {
-        background-color: #C6A57B;
+        background-color: #C6A57B; /* lämmin beige */
     }
 
+    /*
+    ### TIETOSUOJAILMOITUS ###
+    */
 
+    .privacy-notice {
+        font-size: 0.9rem;
+        color: #4B4B3E; /* tumma oliivi */
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        line-height: 1.4;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .privacy-notice a {
+        color: #8FB0A9; /* sinivihreä */
+        text-decoration: underline;
+    }
+    
+    .privacy-notice a:hover {
+        color: #C6A57B; /* lämmin beige */
+    }
 
-    /*   _______________________
-        | Thank you container   |
-        |_______________________|*/
+    /*
+    ### kiittijuttu ###
+    */
 
     .thank-you-container {
         text-align: center;
@@ -526,67 +505,66 @@ table thead {
     }
     
     .thank-you-container a {
-        color: #8FB0A9;
+        color: #8FB0A9; /* sinivihreä */
         text-decoration: underline;
         font-weight: bold;
     }
 
 
-    /*   _______________________
-        |   comparison table    |
-        |_______________________|*/
+/*
+### VERTAILUTAULUKKO ###
+*/
     
-    
+/* taulukon muotoilu */
 .comparison-table {
-    /* width: 100%;
-    max-width: 800px; */
-    /* margin: 20px auto; */
+    margin: 20px auto;
     border-collapse: collapse;
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
+/* otsikkojen ja sisällön muotoilua */
 .comparison-table th, .comparison-table td {
-    padding: 12px 15px;
+    padding: 10px 20px;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* lähes valkoinen */
+    text-wrap: wrap;
 }
 
+/* otsikoiden värit */
 .comparison-table th {
-    background-color: #6C7753; /* Olive tone */
-    color: #F0EDE5;
+    background-color: #6C7753; /* vaalea oliivi */
+    color: #F0EDE5; /* vaalea beige */
     /* font-size: 1.2em; */
 }
 
+/* sisältöjen, eli (?) värit */
 .comparison-table td {
-    color: #4B4B3E; /* Deep Olive Green */
+    color: #4B4B3E; /* tumma oliivi */
 }
 
 .comparison-table .tooltip {
 font-size: 0.9em;
-color: #6C7753;
+color: #6C7753; /* vaalea oliivi */
 }
 
 .comparison-table .checkmark {
-    color: #4CAF50; /* Green check mark */
+    color: #4CAF50; /* vihreä */
 }
 
 .comparison-table .not-included {
-    color: #A0A0A0; /* Light grey for subtle contrast */
-    font-style: italic; /* Optional italic for visual interest */
-    text-align: center; /* Center-align the dash */
+    color: #A0A0A0; /* harmaa */
+    text-align: center;
     font-size: 1em;
 }
 
-
-
 .tooltip {
     position: relative;
-    cursor: pointer;
-    color: #6A6A6A; /* Optional color for (?), can change based on design */
+    cursor: pointer; /* osoittaa, että on lisätoimintoja */
+    color: #4B4B3E; /* tumma oliivi */
     font-weight: bold;
     text-decoration: none;
 }
@@ -594,14 +572,14 @@ color: #6C7753;
 .tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
-    background-color: #333;
-    color: #fff;
+    background-color: #4B4B3E; /* tumma oliivi */
+    color: #fff; /* valkoinen */
     padding: 5px 8px;
     border-radius: 4px;
     font-size: 0.9rem;
     white-space: nowrap;
-    bottom: 100%; /* Position tooltip above the icon */
-    left: 50%;
+    bottom: 100%; /* (?)-merkin yläpuolelle */
+    left: 50%; /* alkaa kirjoittamaan oikealta vasemmalle, ettei mene reunojen yli */
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
@@ -609,61 +587,42 @@ color: #6C7753;
     z-index: 10;
 }
 
-/* Ensure tooltip stays within the viewport */
+/* (?)-lisätieto pysyy taulukon sisässä */
 .tooltip[data-tooltip]:hover::after {
     opacity: 1;
     visibility: visible;
 }
 
-/* Adjust for right side boundaries */
+/* oikean puolen säännöt */
 .tooltip[data-tooltip]:hover::after {
-    left: auto; /* Reset left positioning */
-    right: 0; /* Align to the right edge if near boundary */
-    transform: translateX(0); /* Reset centering */
+    left: auto;
+    right: 0; /* oikea reuna tekstistä jää taulukon oikeaan laitan, ettei mene yli */
+    transform: translateX(0);
 }
 
-
-
-
-/* Style for example list */
+/* esimerkkilista */
 .example-list {
         list-style-type: disc;
-        list-style-position: inside; /* Aligns dots with text */
-        padding-left: 2rem; /* Adds space to left of list */
+        list-style-position: inside;
+        padding-left: 2rem;
         margin-top: 1rem;
     }
 
 .example-list li {
-    padding: 2px 0; /* Space between items */
+    padding: 2px 0;
     font-size: 1.0rem;
     line-height: 1.6;
-    color: #4B4B3E;
+    color: #4B4B3E; /* tumma oliivi */
 }
-
-/* Custom color for list dots */
 .example-list li::marker {
-    color: #8FB0A9; /* Muted Green */
+    color: #8FB0A9; /* sinivihreä */
 }
 
-
-
-
-
-
-
-
-
-
-        /* 
-         ___________________
-        |                   |
-        |     @Scaling      |
-        |___________________|
-        
-        */
+/*
+### SKAALAUS ###
+*/
 
 @media screen and (max-width: 850px) {
-
     #esittely {
         flex-direction: column;
         justify-content: center;
@@ -677,14 +636,15 @@ color: #6C7753;
     section {
         padding: 5%
     }
+
     nav .nav-links {
-        display: none; /* Hide the nav links */
+        display: none; /* navilinkit piiloon */
     }
+
     .menu-icon {
-        display: block; /* Show the menu icon */
+        display: block; /* menuikoni käyttöön */
     }
-
-
+    
     .services-container {
         display: flex;
         flex-direction: column;
@@ -692,40 +652,45 @@ color: #6C7753;
     }
 
     .contact-table, .price-table {
-        width: 100%;
+        /* width: 100%; */
     }
 
     .contact-table th, .contact-table td, .price-table th, .price-table td {
-        font-size: 0.7rem;
-        padding: 1vw 1vw;
+        font-size: 1em;
+        padding: 2vw 1vw;
         text-align: left;
+        word-wrap: break-word;
     }
     .contact-container h2 {
-         font-size: 1.5em;
+         font-size: 1.3rem;
     }
-    .radio-group {
-        font-size: 0.5em;
-    }
-
-
 
     .comparison-table th, .comparison-table td {
-        font-size: 0.7em
+        font-size: 0.9rem;
+        padding: 2vw 1vw;
     }
-}
 
-@media screen and (max-width: 380px) {
-    .comparison-table td {
-        font-size: 0.6em
-    }
 }
 
 
-
-/* Open the sliding menu */
-.mobile-menu.open {
-    display: block;
-    width: 250px; /* Adjust the width as desired */
-    text-align: center;
+@media screen and (max-width: 600px) {
+    .tooltip::after {
+        white-space: wrap;
+    }
+    
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3D3D29; /* tumma oliivi */
+    letter-spacing: 1px;
 }
     
+}
+
+/* slidemenun avaus */
+.mobile-menu.open {
+    display: block;
+    width: 250px; /* leveys */
+    text-align: center;
+}
