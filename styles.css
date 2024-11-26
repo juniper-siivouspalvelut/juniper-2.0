@@ -301,7 +301,12 @@ section#etusivu * {
 #hinnasto {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* gap: 40px; */
+}
+
+#hinnasto div {
+    display: flex;
+    flex-direction: column;
 }
 
 table thead {
@@ -366,11 +371,9 @@ table thead {
 */
 
 
+
 /* Contact Table Styled Like the Pricing Table */
     /* Container for table */
-.table-container {
-    text-align: center;
-}
 
 .contact-table, .price-table {
     width: 60%; 
@@ -424,7 +427,7 @@ table thead {
 
 */
     .contact-container {
-        max-width: 700px;
+        display: flex;
         margin: 50px auto;
         padding: 20px;
         background-color: #ffffff;

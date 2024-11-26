@@ -113,52 +113,60 @@
 
     <!-- hinnasto-osa, taulukossa -->
     <section id="hinnasto">
-        <h2><i class="fas fa-euro-sign"></i> Hinnasto</h2>
-        <p>Hinnat sisältävät alv 25,5%. Matkakulut lasketaan osoitteesta Kansankatu 4.</p>
-
+        
+        <div>
+            <h2><i class="fas fa-euro-sign"></i> Hinnasto</h2>
+            <p>Hinnat sisältävät alv 25,5%. Matkakulut lasketaan osoitteesta Kansankatu 4.</p>
+        </div>
         <!-- taulukko alkaa -->
-        <table class="price-table">
-            <!-- otsikot -->
-            <thead>
-                <tr>
-                    <th>Palvelu</th>
-                    <th>Hinta</th>
-                </tr>
-            </thead>
-            <!-- sisältö -->
-            <tbody>
-                <tr>
-                    <td>Tuntihinta</td>
-                    <td>50,00€ / tunti</td>
-                </tr>
-                <tr>
-                    <td>Pyhät ja viikonloput</td>
-                    <td>+ 20,00€ / kerta</td>
-                </tr>
-                <tr>
-                    <td>Matkakulut</td>
-                    <td>Ilmainen (jos alle 10 km)</td>
-                </tr>
-                <tr>
-                    <td>Kilometrikorvaus</td>
-                    <td>+ 0,50€ / ylittyvä km</td>
-                </tr>
-                <tr>
-                    <td>Paperilaskutus</td>
-                    <td>+ 1,00€</td>
-                </tr>
-            </tbody>
-        </table>
+        <div>
+            <table class="price-table">
+                <!-- otsikot -->
+                <thead>
+                    <tr>
+                        <th>Palvelu</th>
+                        <th>Hinta</th>
+                    </tr>
+                </thead>
+                <!-- sisältö -->
+                <tbody>
+                    <tr>
+                        <td>Tuntihinta</td>
+                        <td>50,00€ / tunti</td>
+                    </tr>
+                    <tr>
+                        <td>Pyhät ja viikonloput</td>
+                        <td>+ 20,00€ / kerta</td>
+                    </tr>
+                    <tr>
+                        <td>Matkakulut</td>
+                        <td>Ilmainen (jos alle 10 km)</td>
+                    </tr>
+                    <tr>
+                        <td>Kilometrikorvaus</td>
+                        <td>+ 0,50€ / ylittyvä km</td>
+                    </tr>
+                    <tr>
+                        <td>Paperilaskutus</td>
+                        <td>+ 1,00€</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <p>Hintoihin <b>ei tule erillisiä käynti- tai pesuainemaksuja</b>. Käytän <b>omia pesuaineita ja siivousvälineitä</b>. Imurin käytössä suosin hygieniasyistä mielummin <b>asiakkaan omaa imuria</b>, mutta erillisestä pyynnöstä voin tuoda oman imurin. Tästä ei tule erillistä maksua.</p>
+        </div>
 
-        <p>Minimitilaus on <b>1 tunti</b>. Hinnat pyöristetään 30 min tarkkuudella.</p>
+        <div>
 
-        <hr>
+            <p>Hintoihin <b>ei tule erillisiä käynti- tai pesuainemaksuja</b>. Käytän <b>omia pesuaineita ja siivousvälineitä</b>. Imurin käytössä suosin hygieniasyistä mielummin <b>asiakkaan omaa imuria</b>, mutta erillisestä pyynnöstä voin tuoda oman imurin. Tästä ei tule erillistä maksua.</p>
 
-        <p>Jos tarvitset <b>aika-arvion</b>, kerrothan rehellisesti <b>tilan koon ja kunnon</b>. Myös kuvat ja videot auttavat aika-arvion muodostamisessa. Karkeasti laskettuna aikaa kuluu ylläpitosiivouksissa <b>n. 1 - 1,5h / 20 m2</b>, riippuen kalustus- ja kuntotasosta. Perussiivouksia varten aikaa menee enemmän ja silloin suosittelen pyytämään minulta aika-arvion tai tarjoamaan budjetin.</p>
+            <p>Minimitilaus on <b>1 tunti</b>. Hinnat pyöristetään 30 min tarkkuudella.</p>
 
-        <p><b>Airbnb-siivouksista</b> voit pyytää tarjouksen suoraan sähköpostitse.</p>
+            <hr>
+
+            <p>Jos tarvitset <b>aika-arvion</b>, kerrothan rehellisesti <b>tilan koon ja kunnon</b>. Myös kuvat ja videot auttavat aika-arvion muodostamisessa. Karkeasti laskettuna aikaa kuluu ylläpitosiivouksissa <b>n. 1 - 1,5h / 20 m2</b>, riippuen kalustus- ja kuntotasosta. Perussiivouksia varten aikaa menee enemmän ja silloin suosittelen pyytämään minulta aika-arvion tai tarjoamaan budjetin.</p>
+
+            <p><b>Airbnb-siivouksista</b> voit pyytää tarjouksen suoraan sähköpostitse.</p>
+        </div>
     </section>
 
     <!-- yhteystietojuttu -->
@@ -198,6 +206,7 @@
         <div class="contact-container">
             <h2>Yhteydenottopyyntö</h2>
             <!-- js -->
+            
             <form action="./submit-form.php" method="POST">
                 <!-- nimi pakollinen -->
                 <label for="name">Nimi *</label>
