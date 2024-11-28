@@ -651,10 +651,6 @@ color: #6C7753; /* vaalea oliivi */
         justify-content: space-around;
     }
 
-    .contact-table, .price-table {
-        /* width: 100%; */
-    }
-
     .contact-table th, .contact-table td, .price-table th, .price-table td {
         font-size: 1em;
         padding: 2vw 1vw;
